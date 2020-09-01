@@ -6,7 +6,7 @@
 /*   By: sdiego <sdiego@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/08 18:08:48 by sdiego            #+#    #+#             */
-/*   Updated: 2020/08/28 13:36:03 by sdiego           ###   ########.fr       */
+/*   Updated: 2020/09/01 07:44:12 by sdiego           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,12 +95,12 @@ void    draw(t_treads *treads)
             treads->sdl->img[y * treads->camera->hsize + x] = col_to_int(col);
             x++;
         }
-
+/*
         SDL_UpdateTexture(treads->sdl->text, NULL, treads->sdl->img, WIN_W * (sizeof(int)));
 	    SDL_RenderClear(treads->sdl->ren);
 	    SDL_RenderCopy(treads->sdl->ren, treads->sdl->text, NULL, NULL);
 	    SDL_RenderPresent(treads->sdl->ren);
-
+*/
         y++;
     }
 }
@@ -133,19 +133,11 @@ void    render(t_sdl *sdl, t_camera camera, t_world world)
             printf("error threads\n");
             exit(1);
         }
-        /*
         SDL_UpdateTexture(sdl->text, NULL, sdl->img, WIN_W * (sizeof(int)));
 	    SDL_RenderClear(sdl->ren);
 	    SDL_RenderCopy(sdl->ren, sdl->text, NULL, NULL);
 	    SDL_RenderPresent(sdl->ren);
-        */
     }
-    /*
-    SDL_UpdateTexture(sdl->text, NULL, sdl->img, WIN_W * (sizeof(int)));
-	SDL_RenderClear(sdl->ren);
-	SDL_RenderCopy(sdl->ren, sdl->text, NULL, NULL);
-	SDL_RenderPresent(sdl->ren);
-    */
 }
 
 /*

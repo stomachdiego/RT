@@ -6,7 +6,7 @@
 #    By: sdiego <sdiego@student.21-school.ru>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/06 10:40:08 by aannara           #+#    #+#              #
-#    Updated: 2020/09/01 05:17:13 by sdiego           ###   ########.fr        #
+#    Updated: 2020/09/01 07:30:43 by sdiego           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,9 +52,9 @@ HEADERS = $(INCLUDES)/rt.h
 all: $(NAME)
 
 $(NAME): $(OBJ) $(HEADERS)
-	gcc -g $(FLAGS) $(SRC) $(SDL_FLAGS) $(SDL2_LOAD) $(SDL2) -o $(NAME)
+	gcc $(FLAGS) $(SRC) $(SDL_FLAGS) $(SDL2_LOAD) $(SDL2) -o $(NAME)
 .c.o: $(HEADERS)
-	gcc -g $(FLAGS) $(CFLAGS) $(SDL_FLAGS) -c $< -o $@
+	gcc $(FLAGS) $(SDL_FLAGS) -c $< -o $@
 clean:
 	rm -fr ./src/*.o
 
