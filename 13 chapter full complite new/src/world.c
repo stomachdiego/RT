@@ -6,7 +6,7 @@
 /*   By: sdiego <sdiego@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 15:09:18 by sdiego            #+#    #+#             */
-/*   Updated: 2020/08/27 10:21:12 by sdiego           ###   ########.fr       */
+/*   Updated: 2020/09/01 05:16:20 by sdiego           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,7 +132,8 @@ void	bubblesort(t_t_o *num, int size)
 {
 	int		i;
 	int		j;
-	t_t_o	temp;
+	t_t_o	min;
+	t_t_o	max;
 
 	i = 0;
 	while (i < size - 1)
@@ -140,12 +141,10 @@ void	bubblesort(t_t_o *num, int size)
 		j = (size - 1);
 		while (j > i)
 		{
-			if (num[j - 1].t > num[j].t)
-			{
-				temp = num[j - 1];
-				num[j - 1] = num[j];
-				num[j] = temp;
-			}
+			min = num[j - 1].t < num[j].t ? num[j - 1] : num[j];
+			max = num[j - 1].t < num[j].t ? num[j] : num[j - 1];
+			num[j - 1] = min;
+			num[j] = max;
 			j--;
 		}
 		i++;
