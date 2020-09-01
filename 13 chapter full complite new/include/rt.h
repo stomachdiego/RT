@@ -6,7 +6,7 @@
 /*   By: sdiego <sdiego@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 14:12:41 by sdiego            #+#    #+#             */
-/*   Updated: 2020/08/27 10:39:34 by sdiego           ###   ########.fr       */
+/*   Updated: 2020/09/01 07:17:51 by sdiego           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -326,7 +326,7 @@ int					c(double r, double g, double b);
 
 //world
 void				default_world(t_world *w);
-t_x_t	intersect_world(t_world *w, t_ray r, t_x_t x);
+t_x_t				intersect_world(t_world *w, t_ray r);
 void				bubblesort(t_t_o *num, int size);
 t_i					intersection(double t, int obj);
 t_comps	prepare_computations(t_i i, t_ray r, t_world *w, t_xs xs);

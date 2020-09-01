@@ -6,7 +6,7 @@
 /*   By: sdiego <sdiego@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 15:09:18 by sdiego            #+#    #+#             */
-/*   Updated: 2020/09/01 05:16:20 by sdiego           ###   ########.fr       */
+/*   Updated: 2020/09/01 07:16:17 by sdiego           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,9 +79,9 @@ t_x_t	sortminus(t_x_t x)
 	return (newx);
 }
 
-t_x_t	intersect_world(t_world *w, t_ray r, t_x_t x)
+t_x_t	intersect_world(t_world *w, t_ray r)
 {
-	//t_x_t	x_t;
+	t_x_t	x;
 	int		i;
 	int		hit_obj;
 
@@ -301,7 +301,7 @@ t_color	color_at(t_world *w, t_ray r, int remaining)
 	t_xs xs;
 
 	hit_obj = 0;
-	x = intersect_world(w, r, x);
+	x = intersect_world(w, r);
 	hit_obj = hit(x);
 	//printf("hit = %i\n", hit_obj);
 	//printf("count = %i\n", x.t[hit_obj].count);
